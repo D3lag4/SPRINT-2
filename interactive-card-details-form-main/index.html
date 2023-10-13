@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint 2</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/png" size="32x32" href="./images/favicon-32x32.png">
+</head>
+
+<body>
+    <div class="container">
+
+
+        <section class="card_front">
+        <img src="images/bg-card-front.png" alt="front-card">
+        <span id="test_cardnumber" class="card_front_number">0000 0000 0000 0000</span>
+        <span id="test_name" class="card_front_number">Jane Appleseed</span>
+        <span id="test_date" class="card_front_number">00/00</span>
+        <span id="test_cvc" class="card_front_number">000</span>
+        </section>
+       
+        
+        <section class="card_back">
+        <img src="./images/bg-card-back.png" alt="back-card">
+        </section>
+
+        <section class="input_data">
+           
+            <div class="data">
+            
+            <div class="name">
+                <form id="card_form" class="name">
+                    <label for="name">CARD HOLDER NAME</label><br>
+                    <input type="text" id="name" placeholder="e.g. Appleseed">
+            </div>
+
+            <div class="number">
+                <form id="card_form" class="card_number">
+                    <label for="card_number">CARD NUMBER</label><br>
+                    <input type="text" id="card_number" placeholder="e.g. 1234 5678 9213 0000">
+            </div>
+
+            <div class="month">
+                <form id="card_form" class="month">
+                    <label for="month">EXP.DATE</label><br>
+                    <input type="text" id="month" placeholder="MM">
+            </div>
+
+            <div class="year">
+                <form id="card_form" class="year">
+                    <label for="year">(MM/YY)</label><br>
+                    <input type="text" id="year" placeholder="YY">
+            </div>
+
+            <div class="cvc">
+                <form id="card_form" class="cvc">
+                    <label for="cvc">CVC</label><br>
+                    <input type="text" id="cvc" placeholder="e.g.123">
+            </div>
+
+
+            <div class="confirm">
+                <button>CONFIRM</button>
+            </div>
+        </div>
+        </section>
+
+
+    </div>
+</body>
+
+</html>

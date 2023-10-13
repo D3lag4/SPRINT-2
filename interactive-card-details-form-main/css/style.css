@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+body {
+    background-image: url(../images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    max-width: 1440px;
+    font-size: 18px;
+}
+
+
+.container {
+    display: grid; 
+    grid-template-columns: (2, 1fr);
+    grid-template-areas:
+    "a c"
+    "b c" ;
+}
+
+.card_front {
+    grid-area: a;
+    position: absolute 50px;
+    transform: scale(0.7);
+}
+
+.card_back {
+    grid-area: b;
+    position: relative 350px;
+    transform: scale(0.7);
+}
+
+.input_data {
+    grid-area: c;
+    align-items: center;
+    justify-content: center;
+    color: ;
+    }
+
+
+.data {
+    display: grid;
+    grid-template-areas:
+    "d d d"
+    "e e e"
+    "f g h"
+    "i i i";
+    justify-content: center;
+    align-items: center;
+}
+ #card_form{
+    border-color:hsl(249, 99%, 64%);
+    border-radius: 23%;   
+}
+
+#cardnumber{
+    color: rgb(12, 14, 12);
+    position:absolute ;
+    margin: 50px;
+}
+
+.name {
+    grid-area: d;
+}
+
+.card_number {
+    grid-area: e;
+}
+
+.month {
+    grid-area: f;
+}
+
+.year {
+    grid-area: g;
+}
+
+.cvc {
+    grid-area: h;
+}
+
+.confirm {
+    grid-area: i;
+}
