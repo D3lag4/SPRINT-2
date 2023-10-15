@@ -12,63 +12,77 @@
 <body>
     <div class="container">
 
-
+        <!--Sección de frontal de tarjeta-->
         <section class="card_front">
-        <img src="images/bg-card-front.png" alt="front-card">
-        <span id="test_cardnumber" class="card_front_number">0000 0000 0000 0000</span>
-        <span id="test_name" class="card_front_number">Jane Appleseed</span>
-        <span id="test_date" class="card_front_number">00/00</span>
-        <span id="test_cvc" class="card_front_number">000</span>
+            <img src="images/bg-card-front.png" alt="front-card image">
+            <img id="logo" src="./images/card-logo.svg" alt="card logo">
+            <span id="eg_cardnumber" class="card_front_text">0000 0000 0000 0000</span>
+            <span id="eg_name" class="card_front_text">JANE APPLESEED</span>
+            <span id="eg_date" class="card_front_text">00/00</span>
         </section>
-       
-        
+
+        <!--Sección de reverso de tarjeta-->
+
         <section class="card_back">
-        <img src="./images/bg-card-back.png" alt="back-card">
+            <img src="./images/bg-card-back.png" alt="reverse-card image">
+            <span id="eg_cvc" class="card_back_text">000</span>
         </section>
 
-        <section class="input_data">
-           
-            <div class="data">
-            
-            <div class="name">
-                <form id="card_form" class="name">
-                    <label for="name">CARD HOLDER NAME</label><br>
-                    <input type="text" id="name" placeholder="e.g. Appleseed">
-            </div>
+        <!--Sección del formulario-->
+        <section class="data">
 
-            <div class="number">
-                <form id="card_form" class="card_number">
-                    <label for="card_number">CARD NUMBER</label><br>
-                    <input type="text" id="card_number" placeholder="e.g. 1234 5678 9213 0000">
-            </div>
+            <form id="card_form">
 
-            <div class="month">
-                <form id="card_form" class="month">
-                    <label for="month">EXP.DATE</label><br>
-                    <input type="text" id="month" placeholder="MM">
-            </div>
+                <div class="name">
+                    <form id="card_form" class="name">
+                        <label for="name">CARD HOLDER NAME</label>
+                        <input type="text" id="name" placeholder="e.g. Appleseed">
+                </div>
 
-            <div class="year">
-                <form id="card_form" class="year">
-                    <label for="year">(MM/YY)</label><br>
-                    <input type="text" id="year" placeholder="YY">
-            </div>
+                <div class="card_number">
+                    <form id="card_form" class="card_number">
+                        <label for="card_number">CARD NUMBER</label>
+                        <input type="text" id="card_number" placeholder="e.g. 1234 5678 9213 0000">
+                </div>
 
-            <div class="cvc">
-                <form id="card_form" class="cvc">
-                    <label for="cvc">CVC</label><br>
-                    <input type="text" id="cvc" placeholder="e.g.123">
-            </div>
+                <div class="month">
+                    <form id="card_form" class="month">
+                        <label for="month">EXP.DATE</label>
+                        <input type="text" id="month" placeholder="MM">
+                </div>
 
+                <div class="year">
+                    <form id="card_form" class="year">
+                        <label for="year"> (MM/YY)</label>
+                        <input type="text" id="year" placeholder="YY">
+                </div>
 
-            <div class="confirm">
-                <button>CONFIRM</button>
-            </div>
-        </div>
+                <div class="cvc">
+                    <form id="card_form" class="cvc">
+                        <label for="cvc">CVC</label>
+                        <input type="text" id="cvc" placeholder="e.g.123">
+                </div>
+
+                <div class="confirm">
+                    <button type="submit">Confirm</button>
+                </div>
+            </form>
         </section>
 
 
     </div>
+<script>
+let eg_name = ""
+let name = ""
+if () {
+    
+}
+ 
+
+
+</script>
+
+
 </body>
 
 </html>

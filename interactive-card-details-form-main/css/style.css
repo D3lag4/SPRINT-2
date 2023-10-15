@@ -3,80 +3,133 @@
 body {
     background-image: url(../images/bg-main-desktop.png);
     background-repeat: no-repeat;
-    max-width: 1440px;
+    width: 1440px;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 18px;
 }
 
+/*Contenedor principal y sus tres grillas*/
 
 .container {
-    display: grid; 
-    grid-template-columns: (2, 1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-    "a c"
-    "b c" ;
+        "a c"
+        "b c";
+    margin-top: 150px;    
 }
 
 .card_front {
     grid-area: a;
-    position: absolute 50px;
-    transform: scale(0.7);
+    transform: scale(0.9);
+    margin-left: 120px;
 }
 
 .card_back {
     grid-area: b;
-    position: relative 350px;
-    transform: scale(0.7);
+    transform: scale(0.9);
+    margin-left: 220px;
 }
-
-.input_data {
-    grid-area: c;
-    align-items: center;
-    justify-content: center;
-    color: ;
-    }
-
 
 .data {
-    display: grid;
-    grid-template-areas:
-    "d d d"
-    "e e e"
-    "f g h"
-    "i i i";
-    justify-content: center;
-    align-items: center;
-}
- #card_form{
-    border-color:hsl(249, 99%, 64%);
-    border-radius: 23%;   
+    grid-area: c;
 }
 
-#cardnumber{
-    color: rgb(12, 14, 12);
-    position:absolute ;
-    margin: 50px;
+/* Tarjeta frontal*/
+
+#logo {
+    position: absolute;
+    top: 25px;
+    left: 40px;
+}
+
+#eg_cardnumber {
+    position: absolute;
+    font-size: 30px ;
+    top: 120px;
+    left: 60px;
+}
+
+#eg_name {
+    position: absolute;
+    top: 190px;
+    left: 40px;
+}
+
+#eg_date {
+    position: absolute;
+    top: 190px;
+    left: 350px;
+}
+
+.card_front_text {
+    color: hsl( 0, 0%, 100%);
+}
+
+/*Reverso Tarjeta*/
+
+#eg_cvc {
+    position: absolute;
+    top: 110px;
+    left: 340px;
+}
+
+.card_back_text {
+    color: hsl( 0, 0%, 100%);
+}
+
+
+/*Formulario*/
+
+#card_form {
+   display: flex;
+   flex-direction:column;
+   align-items:stretch ;
+
+}
+
+label {
+    display:flex;
+    color: hsl(278, 68%, 11%);
+}
+
+input {
+    width: max-content;
+    border-width: 1px;
+    border-color: hsl(270, 3%, 87%);
+    border-radius: 8%;
+    background-color: hsl( 0, 0%, 100%);
+    cursor: pointer;
 }
 
 .name {
-    grid-area: d;
+    flex-flow: row;
+
 }
 
 .card_number {
-    grid-area: e;
+    flex-direction: row-reverse;
+
 }
 
 .month {
-    grid-area: f;
+    flex-direction: row;
 }
 
 .year {
-    grid-area: g;
+    flex-direction: row;
 }
 
 .cvc {
-    grid-area: h;
+    flex-direction: row;
 }
 
-.confirm {
-    grid-area: i;
+button {
+    margin-top: 20px;
+    background-color: hsl(278,68%, 11%);
+    color: hsl(270, 3%, 87%);
+    cursor: pointer;
+    width: 450px;
+    align-items: end;
+
 }
