@@ -4,41 +4,42 @@ body {
     background-image: url(../images/bg-main-desktop.png);
     background-repeat: no-repeat;
     width: 100%;
-    max-width: 1440px;
+    width: 1440px;
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 14px;
+    font-size: 18px;
 }
 
-/*Contenedor principal y sus tres grillas*/
+/*Contenedor y sub-contenedores*/
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-        "a c"
-        "b c";
-    margin-top: 150px;
-    align-content: center;
+    display: flex;
+    flex-direction: row;
+    padding: auto;
 }
 
-.card_front {
-    grid-area: a;
-    transform: scale(0.9);
-    margin-left: 120px;
-}
-
-.card_back {
-    grid-area: b;
-    transform: scale(0.9);
-    margin-left: 220px;
-}
-
-.data {
-    grid-area: c;
+.cards {
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
     padding: 50px;
 }
 
-/* Tarjeta frontal*/
+.data {
+    margin-top: 200px;
+}
+
+.card_front {
+    transform: scale(0.9);
+    margin-left: 80px;
+}
+
+.card_back {
+    transform: scale(0.9);
+    margin-left: 160px;
+}
+
+
+/**Tarjeta frontal**/
 
 #logo {
     position: absolute;
@@ -86,24 +87,24 @@ body {
 
 #card_form {
     display: flex;
-    width: 600px;
     flex-direction: column;
-    align-items: stretch;
-
-}
-
-.card_form2 {
-    display: flex; 
     width: 500px;
+
+    }
+
+.card_data2 {
+    display: flex;
+    width: 400px;
     flex-direction: row;
     justify-content: flex-start;
-    align-content: space-between;
-   
+    align-content: space-around;
+
 }
 
 label {
     display: flex;
-    justify-content:space-between;
+    content-visibility: visible;
+    justify-content:flex-start;
     color: hsl(278, 68%, 11%);
 }
 
@@ -115,7 +116,7 @@ input {
     border-color: hsl(270, 3%, 87%);
     border-radius: 8%;
     background-color: hsl(0, 0%, 100%);
-    cursor: pointer;
+    cursor:text;
 }
 
 input:focus {
@@ -124,13 +125,11 @@ input:focus {
 }
 
 .name {
-    flex-flow: row;
-
+    flex-direction: row;
 }
 
 .card_number {
-    flex-direction: row-reverse;
-
+    flex-direction: row ;
 }
 
 .month {
@@ -150,7 +149,18 @@ button {
     background-color: hsl(278, 68%, 11%);
     color: hsl(270, 3%, 87%);
     cursor: pointer;
-    width: 450px;
-    align-items: end;
+    width: 380px;
 
 }
+
+@media screen and (max-width:375px) {
+    body {
+        background-image: url(../images/bg-main-mobile.png);
+        background-repeat: no-repeat;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}  }

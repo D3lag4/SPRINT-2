@@ -12,24 +12,28 @@
 <body>
     <div class="container">
 
-        <!--Sección de frontal de tarjeta-->
-        <section class="card_front">
-            <img src="images/bg-card-front.png" alt="front-card image">
-            <img id="logo" src="./images/card-logo.svg" alt="card logo">
-            <span id="eg_cardnumber" class="card_front_text">0000 0000 0000 0000</span>
-            <span id="eg_name" class="card_front_text">JANE APPLESEED</span>
-            <span id="eg_date" class="card_front_text">00/00</span>
-        </section>
+        <div class="cards">
 
-        <!--Sección de reverso de tarjeta-->
+            <!--Frontal de tarjeta-->
+            <section class="card_front">
+                <img src="images/bg-card-front.png" alt="front-card image">
+                <img id="logo" src="./images/card-logo.svg" alt="card logo">
+                <span id="eg_cardnumber" class="card_front_text">0000 0000 0000 0000</span>
+                <span id="eg_name" class="card_front_text">JANE APPLESEED</span>
+                <span id="eg_date" class="card_front_text">00/00</span>
+            </section>
 
-        <section class="card_back">
-            <img src="./images/bg-card-back.png" alt="reverse-card image">
-            <span id="eg_cvc" class="card_back_text">000</span>
-        </section>
+            <!--Reverso de tarjeta-->
 
-        <!--Sección del formulario-->
-        <section class="data">
+            <section class="card_back">
+                <img src="./images/bg-card-back.png" alt="reverse-card image">
+                <span id="eg_cvc" class="card_back_text">000</span>
+            </section>
+        </div>
+
+        <!--Formulario-->
+        
+        <div class="data">
 
             <form id="card_form">
 
@@ -45,7 +49,7 @@
                         <input type="text" id="card_number" placeholder="e.g. 1234 5678 9213 0000">
                 </div>
 
-                <div class="card_form2">
+                <div class="card_data2">
                     <div class="month">
                         <form id="card_form" class="month">
                             <label for="month">EXP.DATE</label>
@@ -68,11 +72,11 @@
                     <button type="submit">Confirm</button>
                 </div>
             </form>
-        </section>
+        </div>
 
 
     </div>
-    
+
 
 </body>
 
