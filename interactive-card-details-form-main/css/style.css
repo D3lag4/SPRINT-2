@@ -3,6 +3,7 @@
 body {
     background-image: url(../images/bg-main-desktop.png);
     background-repeat: no-repeat;
+    background-size: 60dvh;
     max-width: 1440px;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 18px;
@@ -13,30 +14,29 @@ body {
 .container {
     display: flex;
     flex-direction: row;
-    padding: auto;
+    align-items: center;
+    justify-content: center;
 }
 
 .cards {
     flex-direction: column;
     align-items: center;
-    justify-items: center;
-    padding: 80px;
-}
-
-.data {
-    margin-top: 200px;
 }
 
 .card_front {
     transform: scale(0.9);
-    margin-left: 80px;
+    margin-top: 100px;
 }
 
 .card_back {
     transform: scale(0.9);
-    margin-left: 160px;
+    margin-left: 80px;
 }
 
+.data {
+    margin-top: 80px;
+    margin-left: 80px;
+}
 
 /**Tarjeta frontal**/
 
@@ -88,33 +88,32 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 500px;
-    }
+    padding: 20px;
+}
 
 .card_data2 {
     display: flex;
-    width: 400px;
     flex-direction: row;
-    justify-content: flex-start;
-    align-content: space-around;
+    justify-content: space-between;
+    align-items: ;
 
 }
 
 label {
     display: flex;
-    justify-content:flex-start;
+    justify-content: flex-start;
     color: hsl(278, 68%, 11%);
 }
 
 input {
-    width: 70%;
+    width: 90%;
+    height: 30px;
     box-sizing: content-box;
-    padding: 30px, 50px;
     border-width: 1px;
     border-color: hsl(270, 3%, 87%);
     border-radius: 8%;
     background-color: hsl(0, 0%, 100%);
-    cursor:text;
+    cursor: text;
 }
 
 input:focus {
@@ -124,24 +123,25 @@ input:focus {
 }
 
 .name {
-    flex-direction: row;
+   
 }
 
 .card_number {
-    flex-direction: row ;
-}
-
-.month {
-    flex-direction: row;
     
 }
 
+.month {
+   padding-right: 15px;
+
+}
+
 .year {
-    flex-direction: row;
+   
+    padding-right: 40px;
 }
 
 .cvc {
-    flex-direction: row;
+   
 }
 
 button {
@@ -153,14 +153,78 @@ button {
 
 }
 
+/*Mobile Version*/
 @media only screen and (max-width:375px) {
-    /*Mobile Version*/
+
     body {
         background-image: url(../images/bg-main-mobile.png);
-        background-repeat: no-repeat;}
-   .container{
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-}  }
+        background-repeat: no-repeat;
+        background-size: 375px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        }
+
+    .cards {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items:center;
+        transform: scale(70%);
+    }
+
+    .data {
+        display: flex;
+        flex-direction: column;
+        }
+
+    .card_front {
+        position: relative;
+        margin-top: 90px;
+        margin-right: 50px;
+        z-index: 1;
+    }
+
+    .card_back {
+        position:absolute;
+        margin-bottom: 125px;
+        z-index: 0;
+    }
+
+    .card_data2 {
+        display: flex;
+        width: 280px;
+        flex-direction: row;
+        justify-content: center;
+        align-content: space-around;
+
+    }
+
+    label {
+        display: flex;
+        justify-content:left;
+        color: hsl(278, 68%, 11%);
+    }
+
+    input {
+        width: 70%;
+        box-sizing: content-box;
+        border-width: 1px;
+        border-color: hsl(270, 3%, 87%);
+        border-radius: 8%;
+        background-color: hsl(0, 0%, 100%);
+        cursor: text;
+    }
+
+    input:focus {
+        border: 1px solid hsl(278, 68%, 11%);
+        border-radius: 5%;
+
+    }
+
+
+
+
+}
